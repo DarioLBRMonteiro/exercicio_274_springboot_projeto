@@ -1,0 +1,5 @@
+git init
+git add .
+git commit -m "Project created"
+git remote add origin git@github.com:DarioLBRMonteiro/exercicio_274_springboot_projeto.git
+git push -u origin main
