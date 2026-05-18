@@ -11,3 +11,5 @@ Esse projeto tem o objetivo de aprendizado de aula do curso "Java Completo Progr
 - Tratamento de exceções
 ## Modelo conceitual
 ![Modelo conceitual](https://github.com/DarioLBRMonteiro/exercicio_274_springboot_projeto/blob/main/assets/modelo_conceitual.png)
+![Modelo conceitual](https://github.com/DarioLBRMonteiro/exercicio_274_springboot_projeto/blob/main/assets/DomainInstancepng.png)
+![Modelo conceitual](https://github.com/DarioLBRMonteiro/exercicio_274_springboot_projeto/blob/main/assets/LogicalLayers.png)
