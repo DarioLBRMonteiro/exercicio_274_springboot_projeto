@@ -9,3 +9,5 @@ Esse projeto tem o objetivo de aprendizado de aula do curso "Java Completo Progr
 - Povoar o banco de dados
 - CRUD - Create, Retrieve, Update, Delete
 - Tratamento de exceções
+## Modelo conceitual
+![Modelo conceitual](https://github.com/DarioLBRMonteiro/exercicio_274_springboot_projeto/blob/main/assets/modelo_conceitual.png)
