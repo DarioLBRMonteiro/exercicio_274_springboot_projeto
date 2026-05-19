@@ -1,0 +1,25 @@
+USE master;
+GO
+
+CREATE DATABASE springbootCourse
+ON PRIMARY 
+( 
+    NAME = springbootCourse_Data,
+    FILENAME = 'C:\Users\dario\BASEDADOS\CURSOJAVA\springbootCourse.mdf',
+    SIZE = 10MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)
+LOG ON 
+( 
+    NAME = springbootCourse_Log,
+    FILENAME = 'C:\Users\dario\BASEDADOS\CURSOJAVA\springbootCourse_log.ldf',
+    SIZE = 5MB,
+    MAXSIZE = 2GB,
+    FILEGROWTH = 10%
+);
+GO
+USE springbootCourse;
+GO
+CREATE SCHEMA course
+GO
