@@ -9,9 +9,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "tb_order_item", schema = "course")
+@Table(name = "tb_order_item", schema = "course", uniqueConstraints = @UniqueConstraint(name = "pkOrderItem", columnNames = {"order_id","product_id"}))
 public class OrderItem implements Serializable{
 	private static final long serialVersionUID = 1L;
 

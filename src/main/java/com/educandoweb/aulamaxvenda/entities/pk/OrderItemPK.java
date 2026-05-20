@@ -7,6 +7,7 @@ import com.educandoweb.aulamaxvenda.entities.Order;
 import com.educandoweb.aulamaxvenda.entities.Product;
 
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
@@ -15,11 +16,11 @@ public class OrderItemPK implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
-	@JoinColumn(name = "order_id")
+	@JoinColumn(name = "order_id", foreignKey = @ForeignKey(name = "fkOrderItemOrder"))
 	private Order order;
 	
 	@ManyToOne
-	@JoinColumn(name = "product_id")
+	@JoinColumn(name = "product_id", foreignKey = @ForeignKey(name = "fkOrderItemProduct"))
 	private Product product;
 
 	public Order getOrder() {

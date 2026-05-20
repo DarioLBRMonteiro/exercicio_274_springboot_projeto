@@ -12,7 +12,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 //import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,13 +23,15 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "tb_order", schema = "course")
+@Table(name = "tb_order", schema = "course", uniqueConstraints = @UniqueConstraint(name = "pkOrder", columnNames = {"id"}))
 public class Order implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
@@ -38,7 +42,7 @@ public class Order implements Serializable {
 	
 	//@JsonIgnore
 	@ManyToOne
-	@JoinColumn(name="client_id")
+	@JoinColumn(name="client_id", foreignKey = @ForeignKey(name = "fkOrderClient"))
 	private User client;
 	
 	@OneToMany(mappedBy = "id.order")
